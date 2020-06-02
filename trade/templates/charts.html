@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>charts</title>
+    <link rel="stylesheet" href="../static/charts.css">
+</head>
+
+<body>
+    <div class="container-chart">
+        <div class="wrap-chart">
+            <h1 class="currency-title">Uber wydajne kursy walut!</h1>
+            <div class="chart">
+                <iframe id="igraph" scrolling="no" seamless="seamless"
+                    src="https://chart-studio.plotly.com/~tomeklechu/13.embed"></iframe>
+            </div>
+            <div class="choice-field">
+                <select class="currency-selector" name="currency-selector">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EURO</option>
+                    <option value="GBP">GBP</option>
+                    <option value="MXN">MEXICAN PESOS</option>
+                    <option value="RUB">RUB</option>
+                    <option value="CNY">CNY</option>
+                    <option value="AUD">AUD</option>
+                </select>
+
+                <div class="currency-value animate">
+
+                </div>
+            </div>
+        </div>
+        <script src="../static/charts.js"></script>
+</body>
+
+</html>
+
+{% endblock %}
