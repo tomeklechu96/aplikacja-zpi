@@ -1,0 +1,29 @@
+.navigation{
+    background-color: #827ffe;
+    border-radius: 31px;
+    margin: 20px 10px 0 10px;
+}
+
+.navbar-brand{
+    font-size: 2rem;
+    margin-right: 5%;
+    color: #f2f2f2
+}
+
+.nav-link{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+    color: #f2f2f2
+}
+
+ul.nav a:hover { 
+    color: white !important;
+    transform: scale(1.05) 
+}
+
+div.container a.navbar-brand:hover{
+    color: white !important;
+    transform: scale(1.05)
+}
+

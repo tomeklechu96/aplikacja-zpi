@@ -7,44 +7,30 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" type="text/css" href="../static/style.css">
-<div style="width: 70%; margin-left: 15%;">
+	<link rel="stylesheet" type="text/css" href="../static/css/about.css">
 </head>
-<h1>Aktualne kursy wszystkich walut</h1>
-<p>
-    Poniżej przedstawione aktualny kurs danej waluty do PLN. 
 
-</p> 
-<div style="height: 90px">
-	<p style="margin-top: 25px">
-		Jak jestes kozak to mnie <a href="charts"> kliknij</a>
-	</p>
-</div>
-
-<table class="table table-striped">
-	<thead class="thead-dark">
-		<tr>
-			
-			<th scope="col">Kod</th>
-			<th scope="col">Kurs</th>
-			<th scope="col">Nazwa</th>
-
-			
-		</tr>
-	</thead>
-	<tbody>
-
-{% for curr in serialize %}
-		<tr>
-			
-			<td>{{ curr.code }}</td>
-			<td>{{curr.mid}}</td>
-			<td>{{curr.currency}}</td>
-			
-		</tr>
-{% endfor %}
-
-	</tbody>
-</table>
+<div class="wrapper">
+	<div class="news-container">
+		NEWS
+	</div>
+	<div class="curr-table-container">
+		<table class="table table-striped" id="currency-table">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">Waluta</th>
+					<th scope="col">Kurs</th>
+				</tr>
+			</thead>
+		{% for curr in serialize %}
+				<tr>
+					<td>{{ curr.currency }}</td>
+					<td>{{curr.mid}}</td>
+				</tr>
+		{% endfor %}
+		</table>
+	</div>
+	
 </div>
 
 {% endblock %}

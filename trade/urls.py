@@ -6,6 +6,6 @@ urlpatterns = [
     path('team', views.team, name='team'),
     path('contact', views.contact, name='contact'),
     path('rejestracja', views.rejestracja, name='rejestracja'),
-    path('charts', views.charts, name="wykresy"),
-    path('currencyexchanger', views.currencyexchanger, name="currencyexchanger"),
+    path('charts', views.charts, name="charts"),
+    path('currencyexchanger', views.currencyexchanger, name="currencyexchanger")
 ]

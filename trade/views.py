@@ -7,6 +7,8 @@ from django.views import generic
 from django.utils import timezone
 from django.http import HttpResponseRedirect
 import requests
+from scraper import scrapNews, toJson
+
 # Create your views here.
 
 def about(request):
@@ -21,7 +23,9 @@ def charts(request):
     return render(request, 'charts.html', {'title': 'Charts'})
 
 def currencyexchanger(request):
-    return render(request, 'currencyexchanger.html', {'title': 'currencyexchanger'})
+    newsData = scrapNews()
+    
+    return render(request, 'currencyexchanger.html', {'newsData' : newsData})
 
 
 def team(request):

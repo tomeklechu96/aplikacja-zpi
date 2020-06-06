@@ -1,57 +1,61 @@
 {% extends 'base.html' %}
 {% block content %}
+
 <html lang="en">
+
 <head>
 	<title>Contact V10</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link rel="stylesheet" type="text/css" href="../static/style.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/contact.css">
 
 </head>
+
 <body>
 
-
+<div class="center-contact">
 	<div class="container-contact100">
 
 		<div class="wrap-contact100">
-			<form class="contact100-form validate-form">
+			<form class="contact100-form validate-form" method="post" name="contactForm"
+				action="mailto:bartosz.bojanowski97@gmail.com" encypte="text/plain">
 				<span class="contact100-form-title">
-					Skontaktuj się z nami!
+					Contact us!
 				</span>
 
-				<div class="wrap-input100 validate-input" data-validate="Powiedz jak się nazywasz.">
-					<input class="input100" type="text" name="name" placeholder="Imię i nazwisko">
+				<div class="wrap-input100 validate-input" data-validate="say your name">
+					<input class="input100" type="text" name="name" placeholder="introduce yourself">
 					<span class="focus-input100"></span>
 				</div>
 
-				<div class="wrap-input100 validate-input" data-validate = "Podaj swój adres email.">
-					<input class="input100" type="text" name="email" placeholder="E-mail">
+				<div class="wrap-input100 validate-input" data-validate="say your e-mail address">
+					<input class="input100" type="email" name="email" placeholder="e-mail" required>
 					<span class="focus-input100"></span>
 				</div>
 
-				<div class="wrap-input100 validate-input" data-validate = "Treść wiadomości.">
-					<textarea class="input100" name="message" placeholder="Twoja wiadomość"></textarea>
+				<div class="wrap-input100 validate-input" data-validate="your message">
+					<textarea class="input100" name="message" placeholder="your message"></textarea>
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="container-contact100-form-btn">
-					<button class="contact100-form-btn">
+					<button class="contact100-form-btn" type="submit" name="submit">
 						<span>
 							<i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
-							Wyślij
+							send
 						</span>
 
-						
+
 					</button>
 				</div>
 
-			
-			<span class="contact100-form-alternative">
-					Lub wyślij wiadomość bezpośrednio: </br>
+
+				<span class="contact100-form-alternative">
+					Or maybe you prefer traditional way: </br>
 					kontakt-waluty@adres.pl
 				</span>
-		
+
 			</form>
 		</div>
 	</div>
@@ -59,7 +63,8 @@
 
 
 	<div id="dropDownSelect1"></div>
-
+</div>
 </body>
+
 </html>
 {% endblock %}
